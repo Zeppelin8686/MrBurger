@@ -49,8 +49,8 @@
       margin-left: 16px;
       height: 2px;
       width: 2px;
-      background: #fff;
-      border: 1px solid #fff;
+      background: $white;
+      border: 1px solid $white;
       border-radius: 50%;
   }
 
@@ -61,7 +61,7 @@
 
 .nav__link {
   text-decoration: none;
-  color: #fff;
+  color: $white;
   font-weight: medium;
   font-size: 13px;
   text-transform: uppercase;
@@ -74,7 +74,7 @@
 }
 
 .btn {
-  color: #fff;
+  color: $white;
   font-weight: medium;
   font-size: 13px;
   text-transform: uppercase;
@@ -84,7 +84,7 @@
 }
 
 .btn_order {
-  background-color: #e45028;
+  background-color: $red;
   margin-right:-4px; 
   margin-left: 15px;
   margin-bottom: 5px;
@@ -94,7 +94,7 @@
   transition: 0.3s;
 
   &:hover {
-    background-color: #c1401e;
+    background-color: $dark-red;
   }
 }
 
@@ -130,7 +130,7 @@
   font-family: gagalin;
 	font-weight: normal;
 	font-size: 72px;
-	color: #f9b43b;
+	color: $yellow;
 }
 
 .title__text {
@@ -138,7 +138,7 @@
   font-family: Lifehack;
 	font-weight: normal;
 	font-size: 65px;
-	color: #fff;
+	color: $white;
   letter-spacing: -1.6px;
   line-height: 0.9;
 }
