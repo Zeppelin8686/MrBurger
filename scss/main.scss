@@ -1,0 +1,168 @@
+//config
+@import "config/mixins";
+@import "config/variables";
+
+//layout
+@import "layout/fonts";
+@import "layout/base";
+@import "layout/adjustment";
+
+//section
+@import "section/hero";
+@import "section/best";
+
+
+.feed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    height: 100vh;
+    min-height: 650px;
+}
+
+.feed__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    height: 50%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    overflow: hidden;
+}
+
+.feed__item_overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #4f4f4f;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.feed__item_contant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 230px;
+    height: 100%;
+    position: absolute;
+}
+
+.feed__item_contant h3 {
+    margin-top: 41px;
+    font-family: gagalin;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+    line-height: 2.01;
+}
+
+.feed__item_contant p {
+    margin-top: 16px;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.71;
+}
+
+.btn_lear-more {
+    margin-top: 3px;
+    line-height: 2.31;
+    width: 110px;
+    height: 35px;
+    background-color: #2f3234;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+
+    &:hover {
+    background-color: #1f2122;
+    }
+}
+
+.feed__item_ava {
+    width: 100%;
+}
+
+.burger {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(249,180,59)),color-stop(48%, rgb(235,140,56)),color-stop(74%, rgb(249,180,59)));
+    background: linear-gradient(to bottom, rgb(249,180,59) 0%,rgb(235,140,56) 48%,rgb(249,180,59) 74%);
+}
+
+.team {
+    background-image: url('../img/team.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.menu {
+    background-image: url('../img/bg-menu.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.delivery {
+    background-image: url('../img/bg-delivery.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.pagination {
+    position: fixed;
+    right: 30px;
+    top: 70px;
+}
+
+.pagination__item {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.pagination__item_active:after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+}
