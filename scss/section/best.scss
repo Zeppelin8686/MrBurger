@@ -1,0 +1,99 @@
+.best {
+    background-image: url('../img/bg-webest.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.title__main--best {
+  margin-top: 55px;
+  color: $dark;
+}
+
+.desc {
+  margin-top: 57px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.desc__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.desc__item_icon-meat {
+    margin-right: 11px;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    background-image: url('../icons/meat.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.desc__item_icon-hand {
+    height: 100px;
+    width: 100px;
+    background-image: url('../icons/hand.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.desc__item_icon-leaf {
+    margin-top: -2px;
+    margin-left: 15px;
+    height: 100px;
+    width: 100px;
+    background-image: url('../icons/natural.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.desc__item_subtitle {
+    margin-top: 26px;
+    margin-right: 2px;
+    font-family: lifehack;
+    font-weight: normal;
+    font-size: 24.1px;
+    color: $dark;
+    line-height: 1.167;
+    letter-spacing: -0.6px;
+    text-align: center;
+}
+
+.desc__item_text {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.8);
+    line-height: 1.71;
+    text-align: center;
+}
