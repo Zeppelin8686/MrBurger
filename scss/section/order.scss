@@ -89,6 +89,14 @@
   margin-right: rem(17px);
   cursor: pointer;
   align-items: center;
+
+  @include phones {
+    margin-right: 0 rem(25px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .order__radio-elem {
@@ -147,12 +155,12 @@
         display: block;
         position: absolute;
         color: $red;
-         width: 11px;
-         height: 9px;
-         margin-left: -6px;
-         margin-top: -6px;
-         border-bottom: solid 3px currentColor;
-         border-left: solid 3px currentColor;
+         width: rem(11px);
+         height: rem(9px);
+         margin-left: rem(-6px);
+         margin-top: rem(-6px);
+         border-bottom: solid rem(3px) currentColor;
+         border-left: solid rem(3px) currentColor;
           transform: rotate(-45deg);
       }
     }
@@ -161,7 +169,7 @@
 
 .order__radio-title {
   margin-left: rem(7px);
-  margin-bottom: 0px;
+  margin-bottom: rem(0px);
 }
 
 .form-buttons_submit {
@@ -187,7 +195,7 @@
     width: 100%;
     padding: 0 15%;
     justify-content: flex-start;
-    margin-top: 40px;
+    margin-top: rem(40px);
   }
 
   @include phones {

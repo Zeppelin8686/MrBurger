@@ -86,14 +86,14 @@
   }
 
   @include tablets {
-    font-size: 25px;
+    font-size: rem(25px);
     &:before, &:after {
     top: rem(14px);
     }
   }
 
   @include phones {
-    font-size: 25px;
+    font-size: rem(25px);
     &:before, &:after {
       top: rem(14px);
       }
@@ -125,7 +125,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
   }
 }
 

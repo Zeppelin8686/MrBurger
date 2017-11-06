@@ -30,6 +30,10 @@
   height: 100%;
   @include bg-cover;
   text-decoration: none;
+
+  @include phones {
+    width: rem(40px);
+  }
 }
 
 .menu-accordion__trigger-title {

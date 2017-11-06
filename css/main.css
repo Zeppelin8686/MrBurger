@@ -48,7 +48,7 @@ body {
       font-size: 15px; } }
   @media screen and (max-width: 480px) {
     body {
-      font-size: 14px; } }
+      font-size: 13px; } }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center; }
   @media screen and (max-width: 480px) {
     .section-title {
-      font-size: 50px; } }
+      font-size: 3.125rem; } }
 
 .btn {
   padding: 0.625rem 0.875rem;
@@ -245,6 +245,9 @@ h1, h2, h3, h4, h5, h6, p {
   color: #fff;
   letter-spacing: -0.1rem;
   line-height: 1; }
+  @media screen and (max-width: 480px) {
+    .title__text {
+      font-size: 2.6875rem; } }
 
 .scroll {
   padding-bottom: 2.4375rem;
@@ -387,7 +390,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 2rem; }
   @media screen and (max-width: 480px) {
     .best__icon {
-      margin-right: 25px;
+      margin-right: 1.5625rem;
       margin-bottom: 0;
       padding-right: 0;
       -webkit-box-align: center;
@@ -516,7 +519,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 2.01; }
   @media screen and (max-width: 480px) {
     .feed-block__title {
-      font-size: 24px;
+      font-size: 1.5rem;
       text-align: center;
       line-height: initial; } }
 
@@ -776,12 +779,12 @@ h1, h2, h3, h4, h5, h6, p {
     border-top: 0rem solid transparent; }
   @media screen and (max-width: 768px) {
     .team-accordion__trigger {
-      font-size: 25px; }
+      font-size: 1.5625rem; }
       .team-accordion__trigger:before, .team-accordion__trigger:after {
         top: 0.875rem; } }
   @media screen and (max-width: 480px) {
     .team-accordion__trigger {
-      font-size: 25px; }
+      font-size: 1.5625rem; }
       .team-accordion__trigger:before, .team-accordion__trigger:after {
         top: 0.875rem; } }
 
@@ -820,7 +823,7 @@ h1, h2, h3, h4, h5, h6, p {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      margin-bottom: 25px; } }
+      margin-bottom: 1.5625rem; } }
 
 .team-accordion__img {
   width: 6.25rem;
@@ -858,8 +861,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .menu__title {
   position: absolute;
-  top: 10%;
-  left: 10%; }
+  top: 3.75rem;
+  left: 3.75rem; }
+  @media screen and (max-width: 480px) {
+    .menu__title {
+      top: 1.875rem;
+      left: 1.875rem; } }
 
 .menu-accordion {
   position: absolute;
@@ -887,6 +894,9 @@ h1, h2, h3, h4, h5, h6, p {
   background-position: center center;
   background-size: cover;
   text-decoration: none; }
+  @media screen and (max-width: 480px) {
+    .menu-accordion__trigger {
+      width: 2.5rem; } }
 
 .menu-accordion__trigger-title {
   position: absolute;
@@ -1018,6 +1028,11 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .order__radio {
+      margin-right: 0 1.5625rem; }
+      .order__radio:last-child {
+        margin-right: 0; } }
 
 .order__radio-elem {
   position: absolute;
@@ -1060,18 +1075,18 @@ h1, h2, h3, h4, h5, h6, p {
     display: block;
     position: absolute;
     color: #e45028;
-    width: 11px;
-    height: 9px;
-    margin-left: -6px;
-    margin-top: -6px;
-    border-bottom: solid 3px currentColor;
-    border-left: solid 3px currentColor;
+    width: 0.6875rem;
+    height: 0.5625rem;
+    margin-left: -0.375rem;
+    margin-top: -0.375rem;
+    border-bottom: solid 0.1875rem currentColor;
+    border-left: solid 0.1875rem currentColor;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
 .order__radio-title {
   margin-left: 0.4375rem;
-  margin-bottom: 0px; }
+  margin-bottom: 0rem; }
 
 .form-buttons_submit {
   margin-right: 0.375rem; }
@@ -1098,7 +1113,7 @@ h1, h2, h3, h4, h5, h6, p {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      margin-top: 40px; } }
+      margin-top: 2.5rem; } }
   @media screen and (max-width: 480px) {
     .form-buttons {
       padding: 0;
@@ -1145,7 +1160,8 @@ h1, h2, h3, h4, h5, h6, p {
   width: 50%; }
   @media screen and (max-width: 480px) {
     .footer__elem {
-      text-align: center; } }
+      text-align: center;
+      width: 100%; } }
 
 .footer__address {
   padding-bottom: 0.375rem;
@@ -1231,7 +1247,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   height: 1rem;
   width: 1rem;
-  margin-bottom: 15px; }
+  margin-bottom: 0.9375rem; }
 
 .pagination__link:before {
   content: '';
