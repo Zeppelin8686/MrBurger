@@ -1,0 +1,57 @@
+.pagination {
+  position: fixed;
+  right: rem(30px);
+  top: rem(70px);
+
+  @include tablets {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.pagination__item {
+  position: relative;
+  height: rem(16px);
+  width: rem(16px);
+  margin-bottom: 15px;
+}
+
+.pagination__link:before {
+  content: '';
+  position: absolute;
+  height: rem(16px);
+  width: rem(16px);
+  @include circle (rem(6px), #fff);
+}
+
+.pagination__link:after {
+  content: '';
+  position: absolute;
+  top: rem(-5px);
+  left: rem(-5px);
+  width: rem(16px);
+  height: rem(16px);
+  border: rem(1px) solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.pagination__link:hover:after {
+  opacity: 1;
+}
+
+.pagination__item_active:after {
+  content: '';
+  position: absolute;
+  top: rem(-5px);
+  left: rem(-5px);
+  width: rem(16px);
+  height: rem(16px);
+  border: rem(1px) solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+}

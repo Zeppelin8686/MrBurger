@@ -1,0 +1,72 @@
+.menu-accordion {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+.menu-accordion__item {
+  height: 100%;
+
+  &:active {
+    .menu-accordion__trigger-title{
+      color: $yellow;
+    }
+  }
+
+  &:hover {
+    .menu-accordion__trigger-title{
+      color: $yellow;
+    }
+  }
+}
+
+.menu-accordion__trigger {
+  display: block;
+  float: left;
+  position: relative;
+  width: rem(80px);
+  height: 100%;
+  @include bg-cover;
+  text-decoration: none;
+}
+
+.menu-accordion__trigger-title {
+  position: absolute;
+  left: 50%;
+  top: 68%;
+  transform: rotate(-90deg) translateY(-50%);
+  margin-top: rem(-20px);
+  font-family: 'gagalin';
+  font-weight: normal;
+  font-size: rem(40px);
+  color: #fff;
+  text-align: center;
+	white-space: nowrap;
+  transform-origin: 0 0;
+
+  @include tablets {
+    top: 95%;
+  }
+}
+
+.menu-accordion__content {
+  height: 100%;
+	float: left;
+  background: $dark;
+  opacity: .93;
+	width: 0;
+	overflow: hidden;
+}
+
+.menu-accordion__text {
+  font-family: 'ubuntu';
+  font-weight: normal;
+  font-size: rem(14px);
+  color: #fff;
+  padding: rem(60px) rem(30px);
+	width: 100%;
+  line-height: 1.8;
+  display: none;
+}

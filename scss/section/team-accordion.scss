@@ -1,0 +1,163 @@
+.team-accordion {
+  padding-top: rem(36px);
+}
+
+
+.team-accordion__item {
+  margin-bottom: rem(24px);
+  padding-left: rem(18px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:active {
+    .team-accordion__trigger {
+      color: $yellow;
+
+      &:before {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &:hover {
+    .team-accordion__trigger {
+    color: $yellow;
+    }
+  }
+}
+
+.team-accordion__item--active {
+  .team-accordion__trigger {
+    color: $yellow;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      display: initial;
+    }
+  }
+
+  .team-accordion__members {
+    display: flex;
+    margin-bottom: rem(30px);
+  }
+}
+
+.team-accordion__trigger {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: rem(4px);
+  font-family: 'gagalin';
+  font-weight: normal;
+  align-items: center;
+  font-size: rem(14px);
+  color: #fff;
+  text-decoration: none;
+
+  &:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: rem(-18px);
+		top: rem(8px);
+		width: 0;
+    height: 0;
+  }
+  
+  &:before {
+		border-top: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-bottom: rem(0px) solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+
+	&:after {
+		display: none;
+		border-bottom: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+    border-top: rem(0px) solid transparent;
+  }
+
+  @include tablets {
+    font-size: 25px;
+    &:before, &:after {
+    top: rem(14px);
+    }
+  }
+
+  @include phones {
+    font-size: 25px;
+    &:before, &:after {
+      top: rem(14px);
+      }
+  }
+}
+
+.team-accordion__members {
+  display: flex;
+  padding-top: rem(10px);
+  display: none;
+  justify-content: flex-start;
+
+  @include tablets {
+    flex-direction: column;
+    padding-top: 0;
+    align-items: center;
+    padding: 0 19%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.team-accordion__ava {
+  width: 22%;
+
+  @include tablets {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+}
+
+.team-accordion__img {
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+  @include bg-cover;
+}
+
+.team-accordion__desc {
+  width: 44%;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+
+  & div, p {
+    margin-bottom: rem(8px);
+    font-family: 'ubuntu';
+    font-weight: bold;
+    font-size: rem(14px);
+    color: #fff;
+    line-height: 1.7;
+  }
+
+  & p {
+    font-family: 'ubuntu';
+    font-weight: lighter;
+  }
+}

@@ -1,0 +1,42 @@
+.team {
+  background-image: url('../img/team.jpg'); 
+  @include bg-cover;
+  position: relative;
+}
+
+.team__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  padding: rem(85px) rem(80px) 0rem rem(80px);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 49%;
+  background-color: $dark;
+  opacity: .93;
+
+  @include tablets {
+    width: 100%;
+    padding: rem(65px) rem(65px) 0rem rem(65px);
+  }
+
+  @include phones {
+    width: 100%;
+    padding: rem(65px) rem(45px) 0rem rem(45px);
+  }
+}
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+
+  @include tablets {
+    text-align: center;
+  }
+}
