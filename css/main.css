@@ -896,7 +896,7 @@ h1, h2, h3, h4, h5, h6, p {
   text-decoration: none; }
   @media screen and (max-width: 480px) {
     .menu-accordion__trigger {
-      width: 2.5rem; } }
+      width: 3.4375rem; } }
 
 .menu-accordion__trigger-title {
   position: absolute;
