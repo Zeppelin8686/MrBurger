@@ -29,14 +29,6 @@ flex-direction: column;
     flex-direction: column;
     justify-content: center;
   }
-
-  @include tablets {
-    min-height: rem(1024px);
-  }
-
-  @include phones {
-    min-height: rem(800px);
-  }
 }
 
 .section-title {

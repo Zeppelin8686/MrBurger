@@ -8,13 +8,22 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="icon" type="img/favicon.ico" href="img/favicon.ico">
 	<link rel="stylesheet" href="css/main.css">
-	<script>svg4everybody();</script>
+	<script src="js/svg4everybody.js"></script>
 	<title>Mr. Burger</title>
 </head>
 
 <body>
 	<div class="wrapper">
 		<div class="maincontant">
+			<!-- <div class="section">
+				<div class="controls">
+					<input type="number" class="number">
+					<input type="color" class="color">
+				</div>
+				<div class="block">
+					
+				</div>
+			</div> for practic js-->
 			<section class="section hero" id="hero">
 				<div class="container hero-container">
 					<header class="header">
@@ -44,7 +53,7 @@
 									</li>
 								</ul>
 							</nav>
-							<button href="#order" type="button" class="btn btn_order">Заказать</button>
+							<button type="button" class="btn btn_order">Заказать</button>
 							<a class="hamburger-menu-link" href="">
 								<div class="hamburger-menu-link__bars"></div>
 							</a>
@@ -115,54 +124,86 @@
 			</section>
 			<section class="section burger section_center" id="dark-burger">
 				<div class="container">
+					<div class="burger__scrolls">
+						<a href="" class="burger__scroll burger__scroll-left"></a>
+						<a href="" class="burger__scroll burger__scroll-right"></a>
+					</div>
 					<div class="burger-content">
-						<div class="burger-content__elem burger-content__elem-ingredients">
-							<div class="burger-content__block burger-content__compose">
-								<div class="burger-compose">
-									<ul class="burger-compose__list">
-										<li class="burger-compose__item">
-											<div class="burger-compose__desc">
-												<div class="burger-compose__desc-name"></div>
-												<div class="berger-compose__desc-weight"></div>
+						<div class="burger-content__elem">
+							<div class="burger-content__block burger-content__ingredients">
+								<div class="ingredients-dropdown">
+									<ul class="ingredients-dropdown__list">
+										<li class="ingredients-dropdown__item">
+											<div class="ingredients-dropdown__cell">
+												<img class="ingredients-dropdown__cell-pic" src="icons/beef.svg" alt="beef">
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-name">Говядина</span>
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-weight">300г</span>
 											</div>
 										</li>
-										<li class="burger-compose__item">
-											<div class="burger-compose__desc">
-												<div class="burger-compose__desc-name"></div>
-												<div class="berger-compose__desc-weight"></div>
+										<li class="ingredients-dropdown__item">
+											<div class="ingredients-dropdown__cell">
+												<img class="ingredients-dropdown__cell-pic" src="icons/buns.svg" alt="bun">
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-name">Булочки</span>
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-weight">100г</span>
 											</div>
 										</li>
-										<li class="burger-compose__item">
-											<div class="burger-compose__desc">
-												<div class="burger-compose__desc-name"></div>
-												<div class="berger-compose__desc-weight"></div>
+										<li class="ingredients-dropdown__item">
+											<div class="ingredients-dropdown__cell">
+												<img class="ingredients-dropdown__cell-pic" src="icons/salad.svg" alt="salad">
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-name">Зелень</span>
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-weight">70г</span>
 											</div>
 										</li>
-										<li class="burger-compose__item">
-											<div class="burger-compose__desc">
-												<div class="burger-compose__desc-name"></div>
-												<div class="berger-compose__desc-weight"></div>
+										<li class="ingredients-dropdown__item">
+											<div class="ingredients-dropdown__cell">
+												<img class="ingredients-dropdown__cell-pic" src="icons/sauce.svg" alt="sauce">
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-name">Соус</span>
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-weight">150г</span>
 											</div>
 										</li>
-										<li class="burger-compose__item">
-											<div class="burger-compose__desc">
-												<div class="burger-compose__desc-name"></div>
-												<div class="berger-compose__desc-weight"></div>
+										<li class="ingredients-dropdown__item">
+											<div class="ingredients-dropdown__cell">
+												<img class="ingredients-dropdown__cell-pic" src="icons/cucumber.svg" alt="cucumber">
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-name">Овощи</span>
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-weight">200г</span>
 											</div>
 										</li>
-										<li class="burger-compose__item">
-											<div class="burger-compose__desc">
-												<div class="burger-compose__desc-name"></div>
-												<div class="berger-compose__desc-weight"></div>
+										<li class="ingredients-dropdown__item">
+											<div class="ingredients-dropdown__cell">
+												<img class="ingredients-dropdown__cell-pic" src="icons/cheese.svg" alt="cheese">
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-name">Сыр</span>
+											</div>
+											<div class="ingredients-dropdown__cell">
+												<span class="ingredients-dropdown__cell-weight">80г</span>
 											</div>
 										</li>
 									</ul>
 								</div>
 							</div>
-							<img src="img/black-burger.png" alt="" class="burger-content__burger">
-							<div class="burger-content__block burger-content__kkal">
-								<div class="burger-content__compose-icon"></div>
-							</div>
+							<img src="img/black-burger.png" alt="dark-burger" class="burger-content__burger">
+							<div class="burger-content__block burger-content__kkal"></div>
 						</div>
 						<div class="burger-content__elem">
 							<h2 class="section-title section-title_white">Dark beef burger</h2>
@@ -174,7 +215,7 @@
 								<p class="section-title section-title_price">500
 									<span>рублей</span>
 								</p>
-								<button class="btn btn_order">Заказать</button>
+								<button type="button" class="btn btn_order">Заказать</button>
 							</div>
 						</div>
 					</div>
@@ -395,11 +436,11 @@
 							<div class="order__form-col">
 								<div class="order__form-row">
 									<label class="order__form-block">
-										<div class="order__form-title">Имя</div>
+										<p class="order__form-title">Имя</p>
 										<input class="order__form-input" name="name" type="text" placeholder="">
 									</label>
 									<label class="order__form-block">
-										<div class="order__form-title">Телефон</div>
+										<p class="order__form-title">Телефон</p>
 										<input class="order__form-input" name="phone" type="text" placeholder="">
 									</label>
 								</div>
@@ -459,18 +500,19 @@
 							</div>
 						</div>
 						<div class="form-buttons">
-							<input class="btn form-buttons_submit" name="" type="submit" value="Заказать">
-							<input class="btn form-buttons_reset" name="" type="reset" value="Очистить">
+							<input class="btn form-buttons_submit" type="submit" value="Заказать">
+							<input class="btn form-buttons_reset" type="reset" value="Очистить">
 						</div>
 					</form>
+				</div>
 			</section>
 			<section class="section map section_center" id="map">
-				<div class="yandex-map" id="map"></div>
+				<div class="yandex-map"></div>
 				<footer class="footer">
 					<div class="container container__footer">
 						<div class="footer__elem">
 							<div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-							<a href="tel:+7 (812) 377-13-77" class="footer__phone">+7 (812) 377-13-77</a>
+							<a href="tel:+7(812)377-13-77" class="footer__phone">+7 (812) 377-13-77</a>
 						</div>
 						<div class="footer__elem footer__elem-right">
 							<ul class="socials__list">
@@ -507,35 +549,36 @@
 					</div>
 				</footer>
 			</section>
-			</div>
 		</div>
-		<ul class="pagination">
-			<li class="pagination__item pagination__item_active">
-				<a href="#hero" class="pagination__link">
-				</a>
-			</li>
-			<li class="pagination__item">
-				<a href="#best" class="pagination__link"></a>
-			</li>
-			<li class="pagination__item">
-				<a href="#dark-burger" class="pagination__link"></a>
-			</li>
-			<li class="pagination__item">
-				<a href="#team" class="pagination__link"></a>
-			</li>
-			<li class="pagination__item">
-				<a href="#menu" class="pagination__link"></a>
-			</li>
-			<li class="pagination__item">
-				<a href="#feedbacks" class="pagination__link"></a>
-			</li>
-			<li class="pagination__item">
-				<a href="#order" class="pagination__link"></a>
-			</li>
-			<li class="pagination__item">
-				<a href="#map" class="pagination__link"></a>
-			</li>
-		</ul>
+	</div>
+	<ul class="pagination">
+		<li class="pagination__item pagination__item_active">
+			<a href="#hero" class="pagination__link">
+			</a>
+		</li>
+		<li class="pagination__item">
+			<a href="#best" class="pagination__link"></a>
+		</li>
+		<li class="pagination__item">
+			<a href="#dark-burger" class="pagination__link"></a>
+		</li>
+		<li class="pagination__item">
+			<a href="#team" class="pagination__link"></a>
+		</li>
+		<li class="pagination__item">
+			<a href="#menu" class="pagination__link"></a>
+		</li>
+		<li class="pagination__item">
+			<a href="#feedbacks" class="pagination__link"></a>
+		</li>
+		<li class="pagination__item">
+			<a href="#order" class="pagination__link"></a>
+		</li>
+		<li class="pagination__item">
+			<a href="#map" class="pagination__link"></a>
+		</li>
+	</ul>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
