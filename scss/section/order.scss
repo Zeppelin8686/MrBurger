@@ -195,7 +195,8 @@
     width: 100%;
     padding: 0 15%;
     justify-content: flex-start;
-    margin-top: rem(40px);
+    margin-top: rem(16px);
+    margin-bottom: rem(0px);
   }
 
   @include phones {

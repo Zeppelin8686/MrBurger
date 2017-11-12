@@ -40,7 +40,7 @@
   }
 
   @include phones {
-    padding-bottom: rem(50px); 
+    padding-bottom: rem(16px); 
     padding-left: 0; 
   }
 }
@@ -64,6 +64,10 @@
 
 .hero-desc__title {
   margin-bottom: rem(26.5px);
+
+  @include phones {
+    margin-bottom: rem(0px);
+  }
 }
 
 .title__text {
@@ -84,6 +88,10 @@
   padding-left: rem(6px);
   display: flex;
   justify-content: center;
+
+  @include phones {
+    padding-bottom: rem(16px);
+  }
 }
 
 .scroll__link {
