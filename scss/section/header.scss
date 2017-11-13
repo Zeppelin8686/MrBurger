@@ -6,7 +6,9 @@
 }
 
 .logo__pic {
+  position: relative;
   width: 100%;
+  z-index: 11;
 }
 
 .hero__btns {
@@ -68,4 +70,8 @@
   margin-left: rem(16px);
   margin-right: rem(-2px);
   margin-top: rem(-8px);
+
+  @include tablets {
+    margin-right: rem(17px);
+  }
 }

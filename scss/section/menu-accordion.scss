@@ -6,21 +6,7 @@
   display: flex;
 }
 
-.menu-accordion__item {
-  height: 100%;
 
-  &:active {
-    .menu-accordion__trigger-title{
-      color: $yellow;
-    }
-  }
-
-  &:hover {
-    .menu-accordion__trigger-title{
-      color: $yellow;
-    }
-  }
-}
 
 .menu-accordion__trigger {
   display: block;
@@ -52,6 +38,22 @@
 
   @include tablets {
     top: 95%;
+  }
+}
+
+.menu-accordion__item {
+  height: 100%;
+
+  &:active {
+    .menu-accordion__trigger-title {
+      color: $yellow;
+    }
+  }
+
+  &:hover {
+    .menu-accordion__trigger-title {
+      color: $yellow;
+    }
   }
 }
 

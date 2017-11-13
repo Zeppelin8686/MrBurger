@@ -167,3 +167,26 @@
 
 // })
 
+let menu = (function() {
+  
+    let button = document.querySelector('.hamburger-menu');
+    let menu = document.querySelector('.hero-overlay');
+    let body = document.querySelector('body');
+  
+    let _toggleClass = function(e) {
+      button.classList.toggle('hamburger-menu--active');
+      menu.classList.toggle('hero-overlay--active');
+      body.classList.toggle('body-active-menu');
+      event.preventDefault()
+    }
+  
+    let addListeners = function() {
+      button.addEventListener('click', _toggleClass);
+    }
+  
+    return {
+      init: addListeners
+    }
+  })()
+ 
+  menu.init();

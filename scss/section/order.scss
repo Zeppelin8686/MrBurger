@@ -189,7 +189,8 @@
   display: flex;
   width: 75%;
   justify-content: flex-end;
-  margin-bottom: rem(39px);
+  margin-bottom: rem(55px);
+  padding-right: rem(32px);
 
   @include tablets {
     width: 100%;

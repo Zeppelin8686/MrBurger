@@ -8,7 +8,11 @@
 
 .best__list {
   display: flex;
-  margin-bottom: rem(77px);
+  padding-bottom: rem(101px);
+
+  @include tablets {
+      padding-bottom: rem(277px);
+  }
   
   @include phones {
       flex-direction: column;
@@ -17,9 +21,14 @@
 }
 
 .best__item {
+    padding-top: rem(40px);
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    @include tablets {
+        padding-top: rem(136px);
+    }
 
     @include phones {
         flex-direction: row;

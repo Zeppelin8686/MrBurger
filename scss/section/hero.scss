@@ -16,12 +16,12 @@
 
   @include tablets {
     flex-direction: column;
-    padding: 0 5%;
+    padding: 0 6%;
   }
 
   @include phones {
     flex-direction: column;
-    padding: 0 5%;
+    padding: 0 6%;
   }
 }
 
@@ -32,23 +32,27 @@
 .foto__burger {
   width: 100%;
   padding-bottom: rem(103px);
-  padding-left: rem(20px);
+  padding-left: rem(4px);
+  margin-left: rem(16px);
 
   @include tablets {
+    padding-top: 57px;
     padding-bottom: rem(40px);
     padding-left: 0;
+    margin-left: 0;
   }
 
   @include phones {
     padding-bottom: rem(16px); 
-    padding-left: 0; 
+    padding-left: 0;
+    margin-left: 0;
   }
 }
 
 .hero-desc {
   flex: 1;
   padding-bottom: rem(20px);
-  padding-left: rem(13px);
+  padding-left: rem(29px);
 
   @include tablets {
     padding-bottom: 0;
@@ -65,6 +69,11 @@
 .hero-desc__title {
   margin-bottom: rem(26.5px);
 
+  @include tablets {
+    margin-bottom: rem(23.5px);
+    margin-right: rem(14px);
+  }
+
   @include phones {
     margin-bottom: rem(0px);
   }
@@ -78,6 +87,10 @@
   letter-spacing: rem(-1.6px);
   line-height: 1;
 
+  @include tablets {
+    margin-right: rem(13px);
+  }
+
   @include phones {
     font-size: rem(43px);
   }
@@ -88,6 +101,12 @@
   padding-left: rem(6px);
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    padding-left: 0;
+    margin-right: rem(10px);
+    padding-bottom: rem(36px);
+  }
 
   @include phones {
     padding-bottom: rem(16px);

@@ -1,5 +1,7 @@
 .team-accordion {
   padding-top: rem(36px);
+  padding-bottom: rem(50px);
+  padding-left: rem(2px);
 }
 
 
@@ -50,7 +52,7 @@
 .team-accordion__trigger {
   position: relative;
   display: inline-flex;
-  margin-bottom: rem(4px);
+  margin-bottom: rem(5px);
   font-family: 'gagalin';
   font-weight: normal;
   align-items: center;
