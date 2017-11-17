@@ -53,6 +53,60 @@
 // var resulOfTask = filterBySalary();
 
 // console.log(resulOfTask)
+//==========================================
+// var employees = [
+//   {  
+//     name: 'Alex',
+//     salary: 150
+//   },
+//   {
+//     name: 'Max',
+//     salary: 3000
+//   },
+//   {
+//     name: 'Victor',
+//     salary: 1500
+//   },
+//   {
+//     name: 'Ivan',
+//     salary: 800
+//   }
+// ]
+
+// var hr = [
+//   {  
+//     name: 'Peter',
+//     salary: 3000
+//   },
+//   {
+//     name: 'Nik',
+//     salary: 2000
+//   },
+//   {
+//     name: 'Ann',
+//     salary: 1500
+//   },
+//   {
+//     name: 'Jane',
+//     salary: 6000
+//   }
+// ]
+
+// function filterBySalary (array, salary) {
+//   var resultArr = []
+//   for (var i=0; i<array.length; i++) {
+//     var employee = array[i]
+//     if (employee.salary > salary) {
+//       resultArr.push(employee.name)
+//     }
+//   }
+//   return resultArr
+// }
+
+// console.log(filterBySalary(employees, 1000))
+// console.log(filterBySalary(hr, 1500))
+
+
 //---------------------------
 // function isHtml(path) {
 //   var isHtmlOrNot = path.slice(-4) === 'html'
@@ -167,6 +221,8 @@
 
 // })
 
+
+// HERO OVERLAY
 let menu = (function() {
   
     let button = document.querySelector('.hamburger-menu');
@@ -177,7 +233,7 @@ let menu = (function() {
       button.classList.toggle('hamburger-menu--active');
       menu.classList.toggle('hero-overlay--active');
       body.classList.toggle('body-active-menu');
-      event.preventDefault()
+      e.preventDefault()
     }
   
     let addListeners = function() {
@@ -190,3 +246,58 @@ let menu = (function() {
   })()
  
   menu.init();
+
+  
+  let submitBtn = document.querySelector('.form-buttons_submit')
+  let modalWindow = document.querySelector('.modal-window');
+  let closeBtn = document.querySelector('.close-btn')
+
+
+// MODAL WINDOW IN ORDER SECTION ON TABLETS AND PHONES
+submitBtn.addEventListener('click', e => {
+  modalWindow.classList.add('modal-window--active')
+  e.preventDefault()
+});
+
+closeBtn.addEventListener('click', e => {
+  modalWindow.classList.remove('modal-window--active')
+  e.preventDefault()
+});
+
+// dropdown menu show mouse over, remove click and mouse out
+let ingredientsBtn = document.querySelector('.burger-content__ingredients')
+let dropdowm = document.querySelector('.ingredients-dropdown')
+let crossBtn = document.querySelectorAll('.cross-btn')
+
+ingredientsBtn.addEventListener('mouseover', e => {
+  dropdowm.classList.add('ingredients-dropdown--active')
+  e.preventDefault()
+});
+
+crossBtn[0].addEventListener('click', e => {
+  dropdowm.classList.remove('ingredients-dropdown--active')
+})
+
+console.log(crossBtn)
+
+ingredientsBtn.addEventListener('mouseout', e => {
+  dropdowm.classList.remove('ingredients-dropdown--active')
+  e.preventDefault()
+});
+
+//feedbacks learn more btn
+let learnmoreBtn = document.querySelectorAll('.btn_learn-more')
+let feedOverlay = document.querySelector('.feedbacks-overlay')
+let body = document.querySelector('body');
+
+for (let i = 0; i<learnmoreBtn.length; i++) {
+  learnmoreBtn[i].addEventListener('click', e => {
+    feedOverlay.classList.add('feedbacks-overlay--active')
+    // body.classList.add('body-active-menu');
+  })
+}
+
+crossBtn[1].addEventListener('click', e => {
+  feedOverlay.classList.remove('feedbacks-overlay--active')
+  // body.classList.remove('body-active-menu');
+})

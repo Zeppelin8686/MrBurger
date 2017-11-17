@@ -19,27 +19,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   @include tablets {
     top: 48%;
   }
-
-  &-left {
+}
+  .burger__scroll-left {
     left: rem(-100px);
     transform: rotate(90deg);
 
     @include tablets {
       left: rem(-50px);
     }
+
+    @include phones {
+      left: rem(-66px);
+    }
   }
 
-  &-right {
+  .burger__scroll-right {
     right: rem(-109px);
     transform: rotate(-90deg);
 
     @include tablets {
       right: rem(-42px);
     }
+
+    @include phones {
+      right: rem(-68px);
+    }
   }
 
-  
-}
 
 .burger-content {
   display: flex;
@@ -47,7 +53,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   @include tablets {
     flex-direction: column;
     align-items: center;
-    padding: 0 9.8%;
+    padding: 0 15%;
+  }
+
+  @include phones {
+    padding: 0;
   }
 }
 
@@ -82,10 +92,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
     cursor: pointer;
   }
 
-  &:hover .ingredients-dropdown {
-    left: 90px;
-    opacity: .9;
-  }
+  // &:hover .ingredients-dropdown {
+  //   left: 100%;
+  //   opacity: .9;
+  // }
 
   &:after {
     content: 'Состав';
@@ -101,8 +111,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   }
 
   @include tablets {
-    top: rem(8px);
-    left: rem(124px);
+    top: rem(-4px);
+    left: rem(133px);
+  }
+
+  @include phones {
+    top: 0;
+    left: 0;
   }
 }
 
@@ -151,8 +166,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   }
 
   @include tablets {
-    top: -8px;
-    left: 535px;
+    top: rem(-18px);
+    right: rem(115px);
+    left: initial;
+  }
+
+  @include phones {
+    top: rem(-4px);
+    right: 0;
+    z-index: 0;
   }
 }
 
@@ -165,6 +187,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   opacity: 0;
   border-radius: rem(5px);
   transition: opacity 0.4s;
+  z-index: 1;
 
   &__item {
     height: 44px;
@@ -180,6 +203,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   &__cell {  
    &:nth-child(3) {
     margin-left: auto;
+
+    @include tablets {
+      margin-right: 35px;
+      }
     }
   }
   
@@ -199,6 +226,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
     padding-left: 0;
     font-weight: lighter;
   }
+}
+
+.ingredients-dropdown--active {
+  left: 100%;
+  opacity: .9;
 }
 
 .burger-desc {

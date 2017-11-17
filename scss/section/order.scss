@@ -11,7 +11,7 @@
 
   @include tablets {
     flex-direction: column;
-    padding: 0 15%;
+    padding: 0 17%;
   }
 
   @include phones {
@@ -194,7 +194,7 @@
 
   @include tablets {
     width: 100%;
-    padding: 0 15%;
+    padding: 0 17% 17% 17%;
     justify-content: flex-start;
     margin-top: rem(16px);
     margin-bottom: rem(0px);

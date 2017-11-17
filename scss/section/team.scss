@@ -20,7 +20,7 @@
 
   @include tablets {
     width: 100%;
-    padding: rem(65px) rem(65px) 0rem rem(65px);
+    padding: rem(0px) rem(65px) rem(80px) rem(65px);
   }
 
   @include phones {
@@ -40,3 +40,4 @@
     text-align: center;
   }
 }
+ 

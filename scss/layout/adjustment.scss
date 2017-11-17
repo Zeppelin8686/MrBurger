@@ -77,3 +77,18 @@ flex-direction: column;
     background-color: $dark-red;
   }
 }
+
+.cross-btn {
+  position: absolute;
+  display: none;
+  top: rem(20px);
+  right: rem(20px);
+  width: rem(18px);
+  height: rem(18px);
+  fill: $price;
+  opacity: 1;
+
+  @include tablets {
+    display: initial;
+  }
+}

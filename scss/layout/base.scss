@@ -1,3 +1,13 @@
+html {
+  @include tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,14 +17,6 @@ body {
   // color: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @include tablets {
-    font-size: 15px;
-  }
-
-  @include phones {
-    font-size: 13px;
-  }
 }
 
 .body-active-menu {
