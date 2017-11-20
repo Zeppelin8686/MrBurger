@@ -253,7 +253,7 @@ let menu = (function() {
   let closeBtn = document.querySelector('.close-btn')
 
 
-// MODAL WINDOW IN ORDER SECTION ON TABLETS AND PHONES
+// MODAL WINDOW IN ORDER SECTION
 submitBtn.addEventListener('click', e => {
   modalWindow.classList.add('modal-window--active')
   e.preventDefault()
@@ -278,8 +278,6 @@ crossBtn[0].addEventListener('click', e => {
   dropdowm.classList.remove('ingredients-dropdown--active')
 })
 
-console.log(crossBtn)
-
 ingredientsBtn.addEventListener('mouseout', e => {
   dropdowm.classList.remove('ingredients-dropdown--active')
   e.preventDefault()
@@ -293,11 +291,35 @@ let body = document.querySelector('body');
 for (let i = 0; i<learnmoreBtn.length; i++) {
   learnmoreBtn[i].addEventListener('click', e => {
     feedOverlay.classList.add('feedbacks-overlay--active')
-    // body.classList.add('body-active-menu');
+    body.classList.add('body-active-menu');
   })
 }
 
 crossBtn[1].addEventListener('click', e => {
   feedOverlay.classList.remove('feedbacks-overlay--active')
-  // body.classList.remove('body-active-menu');
+  body.classList.remove('body-active-menu');
 })
+
+
+
+//team accordion
+function teamAcco() {
+  let teamAcco = document.querySelector('.team-accordion');
+  teamAcco.addEventListener('click', e => {
+    e.preventDefault();
+    let currentTrigger = e.target;
+    let item = currentTrigger.closest('.team-accordion__item');
+    let items = document.querySelectorAll('.team-accordion__item');
+    if (!item.classList.contains('team-accordion__item--active')) {
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.remove('team-accordion__item--active');
+      }
+      item.classList.add('team-accordion__item--active');
+    }
+    else {
+      item.classList.remove('team-accordion__item--active');
+    }
+  });
+}
+
+teamAcco();

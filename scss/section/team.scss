@@ -6,7 +6,7 @@
 
 .team__section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   position: absolute;
@@ -21,6 +21,7 @@
   @include tablets {
     width: 100%;
     padding: rem(0px) rem(65px) rem(80px) rem(65px);
+    align-items: center;
   }
 
   @include phones {

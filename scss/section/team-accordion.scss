@@ -30,6 +30,8 @@
   }
 }
 
+
+
 .team-accordion__item--active {
   .team-accordion__trigger {
     color: $yellow;
@@ -44,8 +46,14 @@
   }
 
   .team-accordion__members {
-    display: flex;
+    height: 100%;
     margin-bottom: rem(30px);
+    opacity: 1;
+    transition: opacity .6s;
+  }
+
+  .team-accordion__img {
+    display: block;
   }
 }
 
@@ -105,7 +113,9 @@
 .team-accordion__members {
   display: flex;
   padding-top: rem(10px);
-  display: none;
+  // display: none;
+  height: 0;
+  opacity: 0;
   justify-content: flex-start;
 
   @include tablets {
@@ -132,6 +142,7 @@
 }
 
 .team-accordion__img {
+  display: none;
   width: rem(100px);
   height: rem(100px);
   border-radius: 50%;

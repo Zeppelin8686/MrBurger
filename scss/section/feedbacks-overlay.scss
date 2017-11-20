@@ -10,18 +10,13 @@
   background-color: $dark;
   opacity: 0;
   height: 0vh;
-  z-index: 10;
+  z-index: 12;
+  transition: opacity .3s height .3s;
 
   &.feedbacks-overlay--active {
-    left: -9999px;
-    opacity: 0;
-    height: 100vh;
-
-    @include tablets {
     opacity: .99;
     height: 100vh;
     left: 0;
-    }
   }
 }
 

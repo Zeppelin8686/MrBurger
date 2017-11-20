@@ -162,15 +162,17 @@ h1, h2, h3, h4, h5, h6, p {
 
 .cross-btn {
   position: absolute;
-  display: none;
   top: 1.25rem;
   right: 1.25rem;
   width: 1.125rem;
   height: 1.125rem;
   fill: #e35028;
-  opacity: 1; }
+  cursor: pointer; }
+
+.close-ingrediets {
+  display: none; }
   @media screen and (max-width: 768px) {
-    .cross-btn {
+    .close-ingrediets {
       display: initial; } }
 
 .hero {
@@ -677,16 +679,13 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #2f3234;
   opacity: 0;
   height: 0vh;
-  z-index: 10; }
+  z-index: 12;
+  -webkit-transition: opacity .3s height .3s;
+  transition: opacity .3s height .3s; }
   .feedbacks-overlay.feedbacks-overlay--active {
-    left: -9999px;
-    opacity: 0;
-    height: 100vh; }
-    @media screen and (max-width: 768px) {
-      .feedbacks-overlay.feedbacks-overlay--active {
-        opacity: .99;
-        height: 100vh;
-        left: 0; } }
+    opacity: .99;
+    height: 100vh;
+    left: 0; }
 
 .feedback-window {
   position: relative;
@@ -960,9 +959,9 @@ h1, h2, h3, h4, h5, h6, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -981,7 +980,10 @@ h1, h2, h3, h4, h5, h6, p {
   @media screen and (max-width: 768px) {
     .team__section {
       width: 100%;
-      padding: 0rem 4.0625rem 5rem 4.0625rem; } }
+      padding: 0rem 4.0625rem 5rem 4.0625rem;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   @media screen and (max-width: 480px) {
     .team__section {
       width: 100%;
@@ -1030,10 +1032,14 @@ h1, h2, h3, h4, h5, h6, p {
     display: initial; }
 
 .team-accordion__item--active .team-accordion__members {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1.875rem; }
+  height: 100%;
+  margin-bottom: 1.875rem;
+  opacity: 1;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s; }
+
+.team-accordion__item--active .team-accordion__img {
+  display: block; }
 
 .team-accordion__trigger {
   position: relative;
@@ -1088,7 +1094,8 @@ h1, h2, h3, h4, h5, h6, p {
   display: -ms-flexbox;
   display: flex;
   padding-top: 0.625rem;
-  display: none;
+  height: 0;
+  opacity: 0;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start; }
@@ -1121,6 +1128,7 @@ h1, h2, h3, h4, h5, h6, p {
       margin-bottom: 1.5625rem; } }
 
 .team-accordion__img {
+  display: none;
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%;
@@ -1441,18 +1449,19 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: center;
   top: 50%;
   left: -9999px;
+  opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5); }
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s; }
 
 .modal-window--active {
-  left: -624.9375rem; }
-  @media screen and (max-width: 768px) {
-    .modal-window--active {
-      left: 50%; } }
+  left: 50%;
+  opacity: 1; }
 
 .modal-window-title {
   margin-bottom: 18px;
