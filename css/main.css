@@ -175,6 +175,10 @@ h1, h2, h3, h4, h5, h6, p {
     .close-ingrediets {
       display: initial; } }
 
+.close-menu {
+  display: none;
+  fill: #fff; }
+
 .hero {
   background-image: url("../img/bg-first.jpg");
   background-repeat: no-repeat;
@@ -671,7 +675,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: -624.9375rem;
   bottom: 0;
@@ -1180,13 +1184,18 @@ h1, h2, h3, h4, h5, h6, p {
   top: 0;
   bottom: 0;
   right: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
 
 .menu-accordion__trigger {
-  display: block;
-  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   width: 5rem;
   height: 100%;
@@ -1218,7 +1227,15 @@ h1, h2, h3, h4, h5, h6, p {
       top: 95%; } }
 
 .menu-accordion__item {
-  height: 100%; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  max-width: 70%;
+  z-index: 1; }
+  @media screen and (max-width: 768px) {
+    .menu-accordion__item {
+      max-width: 100%; } }
   .menu-accordion__item:active .menu-accordion__trigger-title {
     color: #f9b43b; }
   .menu-accordion__item:hover .menu-accordion__trigger-title {
@@ -1226,7 +1243,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .menu-accordion__content {
   height: 100%;
-  float: left;
   background: #2f3234;
   opacity: .93;
   width: 0;
@@ -1238,9 +1254,26 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 0.875rem;
   color: #fff;
   padding: 3.75rem 1.875rem;
-  width: 100%;
+  width: 0;
   line-height: 1.8;
-  display: none; }
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s; }
+
+.menu-accordion__item--active {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2; }
+  .menu-accordion__item--active .menu-accordion__content {
+    width: 100%;
+    position: relative; }
+  .menu-accordion__item--active .menu-accordion__text {
+    width: 100%;
+    opacity: 1; }
+  @media screen and (max-width: 480px) {
+    .menu-accordion__item--active .close-menu {
+      display: initial; } }
 
 .order {
   background-image: url("../img/bg-delivery.jpg");

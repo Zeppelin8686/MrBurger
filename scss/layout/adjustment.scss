@@ -93,5 +93,10 @@ flex-direction: column;
 
   @include tablets {
     display: initial;
-  }
+  }  
+}
+
+.close-menu {
+  display: none;
+  fill: #fff;
 }

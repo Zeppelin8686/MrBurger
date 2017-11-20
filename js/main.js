@@ -222,7 +222,7 @@
 // })
 
 
-// HERO OVERLAY
+// HERO OVERLAY-----------------------------------------------------------
 let menu = (function() {
   
     let button = document.querySelector('.hamburger-menu');
@@ -247,62 +247,71 @@ let menu = (function() {
  
   menu.init();
 
-  
+  // MODAL WINDOW IN ORDER SECTION------------------------------------------
+
+function modalWindow() {
   let submitBtn = document.querySelector('.form-buttons_submit')
   let modalWindow = document.querySelector('.modal-window');
   let closeBtn = document.querySelector('.close-btn')
 
-
-// MODAL WINDOW IN ORDER SECTION
-submitBtn.addEventListener('click', e => {
-  modalWindow.classList.add('modal-window--active')
-  e.preventDefault()
+  submitBtn.addEventListener('click', e => {
+       modalWindow.classList.add('modal-window--active')
+      e.preventDefault()
 });
 
-closeBtn.addEventListener('click', e => {
-  modalWindow.classList.remove('modal-window--active')
-  e.preventDefault()
+  closeBtn.addEventListener('click', e => {
+      modalWindow.classList.remove('modal-window--active')
+      e.preventDefault()
 });
+}
+modalWindow();
 
-// dropdown menu show mouse over, remove click and mouse out
-let ingredientsBtn = document.querySelector('.burger-content__ingredients')
-let dropdowm = document.querySelector('.ingredients-dropdown')
-let crossBtn = document.querySelectorAll('.cross-btn')
 
-ingredientsBtn.addEventListener('mouseover', e => {
-  dropdowm.classList.add('ingredients-dropdown--active')
-  e.preventDefault()
-});
+// dropdown menu----------------------------------------------------------
 
-crossBtn[0].addEventListener('click', e => {
-  dropdowm.classList.remove('ingredients-dropdown--active')
-})
+function dropDown() {
+  let ingredientsBtn = document.querySelector('.burger-content__ingredients')
+  let dropdowm = document.querySelector('.ingredients-dropdown')
+  let crossBtn = document.querySelector('.close-ingrediets')
+  
+  ingredientsBtn.addEventListener('mouseover', e => {
+    dropdowm.classList.add('ingredients-dropdown--active')
+  });
+  
+  crossBtn.addEventListener('click', e => {
+    dropdowm.classList.remove('ingredients-dropdown--active')
+  })
+  
+  ingredientsBtn.addEventListener('mouseout', e => {
+    dropdowm.classList.remove('ingredients-dropdown--active')
+  });  
+}
+dropDown();
 
-ingredientsBtn.addEventListener('mouseout', e => {
-  dropdowm.classList.remove('ingredients-dropdown--active')
-  e.preventDefault()
-});
+//feedbacks learn more btn----------------------------------------------------------
 
-//feedbacks learn more btn
-let learnmoreBtn = document.querySelectorAll('.btn_learn-more')
-let feedOverlay = document.querySelector('.feedbacks-overlay')
-let body = document.querySelector('body');
-
-for (let i = 0; i<learnmoreBtn.length; i++) {
-  learnmoreBtn[i].addEventListener('click', e => {
-    feedOverlay.classList.add('feedbacks-overlay--active')
-    body.classList.add('body-active-menu');
+function FeedBtn() {
+  let learnmoreBtn = document.querySelectorAll('.btn_learn-more')
+  let feedOverlay = document.querySelector('.feedbacks-overlay')
+  let closeFeed = document.querySelector('.close-feed')
+  
+  for (let i = 0; i<learnmoreBtn.length; i++) {
+    learnmoreBtn[i].addEventListener('click', e => {
+      feedOverlay.classList.add('feedbacks-overlay--active')
+    })
+  }
+  
+  closeFeed.addEventListener('click', e => {
+    feedOverlay.classList.remove('feedbacks-overlay--active')
+    console.log(feedOverlay)
   })
 }
-
-crossBtn[1].addEventListener('click', e => {
-  feedOverlay.classList.remove('feedbacks-overlay--active')
-  body.classList.remove('body-active-menu');
-})
+FeedBtn();
 
 
 
-//team accordion
+
+//team accordion------------------------------------------------------------------
 function teamAcco() {
   let teamAcco = document.querySelector('.team-accordion');
   teamAcco.addEventListener('click', e => {
@@ -321,5 +330,47 @@ function teamAcco() {
     }
   });
 }
-
 teamAcco();
+
+//menu accordion---------------------------------------------------------------------
+function menuAcco() {
+  let menuAcco = document.querySelector('.menu-accordion')
+
+  menuAcco.addEventListener('click', e => {
+    e.preventDefault()
+
+    let currentTrigger = e.target
+    let item = currentTrigger.closest('.menu-accordion__item')
+    let items = document.querySelectorAll('.menu-accordion__item')
+
+    if (!item.classList.contains('menu-accordion__item--active')) {
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.remove('menu-accordion__item--active');
+      }
+      item.classList.add('menu-accordion__item--active');
+    }
+    else {
+      item.classList.remove('menu-accordion__item--active');
+    }
+  })
+}
+menuAcco();
+
+//OnePageScroll---------------------------------------------------------------------
+onePageScroll(".maincontant", {
+   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 500,             // AnimationTime let you define how long each section takes to animate
+   pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
+                                    // the browser's width is less than 600, the fallback will kick in.
+});
+
+
