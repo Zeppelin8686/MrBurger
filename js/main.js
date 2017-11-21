@@ -374,3 +374,27 @@ onePageScroll(".maincontant", {
 });
 
 
+//Courusel ---------------------------------------------------------
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    item: 1,
+    loop: true
+  });
+})
+
+
+
+let owl = $('.owl-carousel');
+owl.owlCarousel();
+// Go to the next item
+$('.burger__scroll-right').click( e => {
+  e.preventDefault()
+    owl.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.burger__scroll-left').click(e => {
+  e.preventDefault()
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    owl.trigger('prev.owl.carousel', [300]);
+})
