@@ -684,19 +684,24 @@ h1, h2, h3, h4, h5, h6, p {
   opacity: 0;
   height: 0vh;
   z-index: 12;
-  -webkit-transition: opacity .3s height .3s;
-  transition: opacity .3s height .3s; }
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s; }
   .feedbacks-overlay.feedbacks-overlay--active {
     opacity: .99;
     height: 100vh;
     left: 0; }
+  .feedbacks-overlay .feedback-window {
+    opacity: 1; }
 
 .feedback-window {
   position: relative;
   width: 29.5625rem;
   padding: 1.25rem 1.875rem;
   background-color: #fff;
-  border-radius: 0.3125rem; }
+  border-radius: 0.3125rem;
+  opacity: 0;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s; }
   .feedback-window h3 {
     color: #2f3234; }
   .feedback-window p {
@@ -1260,20 +1265,24 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transition: opacity 1s;
   transition: opacity 1s; }
 
-.menu-accordion__item--active {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2; }
-  .menu-accordion__item--active .menu-accordion__content {
-    width: 100%;
-    position: relative; }
-  .menu-accordion__item--active .menu-accordion__text {
-    width: 100%;
-    opacity: 1; }
-  @media screen and (max-width: 480px) {
-    .menu-accordion__item--active .close-menu {
-      display: initial; } }
+@media screen and (max-width: 480px) {
+  .menu-accordion__item--active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2; } }
+
+.menu-accordion__item--active .menu-accordion__content {
+  width: 100%;
+  position: relative; }
+
+.menu-accordion__item--active .menu-accordion__text {
+  width: 100%;
+  opacity: 1; }
+
+@media screen and (max-width: 480px) {
+  .menu-accordion__item--active .close-menu {
+    display: initial; } }
 
 .order {
   background-image: url("../img/bg-delivery.jpg");
@@ -1489,8 +1498,8 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s; }
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s; }
 
 .modal-window--active {
   left: 50%;
