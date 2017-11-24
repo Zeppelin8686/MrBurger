@@ -29,14 +29,6 @@ flex-direction: column;
     flex-direction: column;
     justify-content: center;
   }
-
-  @include tablets {
-    min-height: rem(1024px);
-  }
-
-  @include phones {
-    min-height: rem(800px);
-  }
 }
 
 .section-title {
@@ -53,6 +45,8 @@ flex-direction: column;
 
   &_white {
     color: #fff;
+    padding-left: rem(15px);
+    text-align: center;
   }
 
   &_center {

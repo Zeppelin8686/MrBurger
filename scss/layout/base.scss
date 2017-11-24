@@ -17,6 +17,11 @@ body {
   }
 }
 
+.body-active-menu {
+  overflow: hidden;
+} /* class for hamburger menu add throught js*/
+
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
