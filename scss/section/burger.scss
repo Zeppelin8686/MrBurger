@@ -1,0 +1,107 @@
+.burger {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(249,180,59)),color-stop(48%, rgb(235,140,56)),color-stop(74%, rgb(249,180,59)));
+  background: linear-gradient(to bottom, rgb(249,180,59) 0%,rgb(235,140,56) 48%,rgb(249,180,59) 74%);
+}
+
+.burger-content {
+  display: none;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    align-self: center;
+    left: -150px;
+    width: 300px;
+    height: 30px;
+    background-image: url('../../icons/arrow-scroll.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(90deg);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    align-self: center;
+    right: -150px;
+    width: 300px;
+    height: 30px;
+    background-image: url('../../icons/arrow-scroll.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(-90deg);
+  }
+}
+
+.burger-content__elem {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.burger-content__block {
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: rem(4px);
+}
+
+.burger-content__compose {
+  background-image: url('../../icons/burger.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #f08c33;
+
+  &:hover {
+    background-color: $dark-red;
+  }
+
+  &:after {
+    content: 'Состав';
+    display: flex;
+    height: 100%;
+    color: #fff;
+    font-family: gagalin;
+    font-weight: normal;
+    font-size: rem(14px);
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+.burger-content__kkal {
+  background-image: url('../../icons/kkal.svg');
+  background-repeat: no-repeat;
+  background-position: left center; 
+}
+
+
+
+.burger-desc {
+  margin-bottom: rem(36px);
+
+  & p {
+    font-weight: lighter;
+    font-size: rem(14px);
+    line-height: 1.71;
+    color: #fff;
+  }
+}
+
+
+
+.burger-order {
+  display: flex;
+  align-items: flex-end;
+}
+
+.section-title_price {
+  margin-bottom: 0;
+  color: $price;
+  
+& span {
+  font-size: rem(30px);
+
+  }
+} 

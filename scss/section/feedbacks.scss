@@ -1,0 +1,137 @@
+.feed__list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  min-height: rem(650px);
+  width: 100%;
+
+  @include tablets {
+    min-height: rem(1024px);
+  }
+
+  @include phones {
+    min-height: rem(800px);
+  }
+}
+
+.feed__item {
+  position: relative;
+  width: 25%;
+  height: 50%;
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
+  }
+
+}
+
+.feed-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    transition: .3s;
+  }
+
+  &:hover {
+    &:after {
+      background: rgba(#444546, .7);
+    }
+  }
+}
+
+.feed-block__photo {
+  width: 100%;
+  height: 100%;
+  @include bg-cover;
+  filter: grayscale(100%);
+}
+
+.feed-block__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  padding: 5% 17% 0;
+  transition: .3s;
+  z-index: 10;
+
+  @include tablets {
+    padding: 0 10%;
+    align-items: center;
+  }
+
+    &:hover {
+    transform: translate(-50% -50%);
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+.feed-block__title {
+  font-family: gagalin;
+  font-weight: normal;
+  font-size: rem(14px);
+  color: #fff;
+  line-height: 2.01;
+
+  @include phones {
+    font-size: rem(24px);
+    text-align: center;
+    line-height: initial;
+  }
+}
+
+.feed-block__text {
+  margin-top: rem(16px);
+  font-weight: lighter;
+  font-size: rem(14px);
+  color: #fff;
+  line-height: 1.71;
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.btn_learn-more {
+  margin-top: rem(17px);
+  background-color: $dark;
+  transition: background-color 0.3s;
+
+  &:hover {
+  background-color: $moredark;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.btn_learn-more--hiden {
+  display: none;
+
+  @include phones {
+    display: initial;
+  }
+}
