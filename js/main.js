@@ -220,12 +220,54 @@
 //   container.innerHTML = blocksHtml
 
 // })
+$(document).ready(function() {
+  ymaps.ready(init); 
 
+  let placemarks = [ 
+    {
+      latitude: 59.9689,
+      longitude: 30.3117
+    },
+    {
+      latitude: 59.9443,
+      longitude: 30.3821
+    },
+    {
+      latitude: 59.9109,
+      longitude: 30.4954
+    },
+    {
+      latitude: 59.8889,
+      longitude: 30.3107
+    }
+  ];
+  
+  function init() {
+    let map = new ymaps.Map("map", {
+      center: [59.9182, 30.3056],
+      zoom: 12,
+      controls: ["zoomControl"], 
+      behaviors: ["drag"]
+    });
+    placemarks.forEach(function(obj){
+      let placemark = new ymaps.Placemark(
+          [obj.latitude, obj.longitude], {},
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-marker.png',
+            iconImageSize: [46, 57],
+            iconImageOffset: [-23, -57]
+          });
+          map.geoObjects.add(placemark);
+    });
+  }
+});
 
 // HERO OVERLAY-----------------------------------------------------------
 let menu = (function() {
   
     let button = document.querySelector('.hamburger-menu');
+    let links = document.querySelectorAll('.hero-overlay-menu__link')
     let menu = document.querySelector('.hero-overlay');
     let body = document.querySelector('body');
   
@@ -238,6 +280,14 @@ let menu = (function() {
   
     let addListeners = function() {
       button.addEventListener('click', _toggleClass);
+
+      for (i=0; links.length<1; i++) {
+        links[i].addEventListener('click', e => {
+          button.classList.remove('hamburger-menu--active');
+          menu.classList.remove('hero-overlay--active');
+          body.classList.remove('body-active-menu');
+        });
+      }
     }
   
     return {
@@ -356,24 +406,6 @@ function menuAcco() {
 }
 menuAcco();
 
-//OnePageScroll---------------------------------------------------------------------
-onePageScroll(".maincontant", {
-   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
-                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 500,             // AnimationTime let you define how long each section takes to animate
-   pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-   keyboard: true,                  // You can activate the keyboard controls
-   responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
-                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
-                                    // the browser's width is less than 600, the fallback will kick in.
-});
-
-
 // Courusel ---------------------------------------------------------
 $(document).ready(function(){
   owl = $(".slider__list").owlCarousel({
@@ -396,4 +428,72 @@ $(document).ready(function(){
       owl.trigger('prev.owl.carousel', [300]);
   })
 })
+
+//OnePageScroll---------------------------------------------------------------------
+$(document).ready(function() {
+onePageScroll(".maincontant", {
+  sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+  easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
+                                   // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+  animationTime: 500,             // AnimationTime let you define how long each section takes to animate
+  pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide. 
+  updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+  beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+  afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+  loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+  keyboard: true,                  // You can activate the keyboard controls
+  responsiveFallback: false,      // You can fallback to normal page scroll by defining the width of the browser in which
+                                   // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
+                                   // the browser's width is less than 600, the fallback will kick in.
+
+  });
+});
+
+// let links = document.querySelectorAll('.nav__link')
+
+// for (i=0; i<links.length; i++) {
+//   links[i].addEventListener('click', e => {
+    
+//     moveTo('.maincontant', 2)
+//   });
+
+//Header menu-----------------------------------
+$('[data-index="2"]').on('click', e =>{
+  e.preventDefault()
+  moveTo(".maincontant", 2);
+});
+
+$('[data-index="3"]').on('click', e =>{
+  e.preventDefault()
+  moveTo(".maincontant", 3);
+});
+
+$('[data-index="4"]').on('click', e =>{
+  e.preventDefault()
+  moveTo(".maincontant", 4);
+});
+
+$('[data-index="5"]').on('click', e =>{
+  e.preventDefault()
+  moveTo(".maincontant", 5);
+});
+
+$('[data-index="6"]').on('click', e =>{
+  e.preventDefault()
+  moveTo(".maincontant", 6);
+});
+
+$('[data-index="8"]').on('click', e =>{
+  e.preventDefault()
+  moveTo(".maincontant", 8);
+});
+
+//order buttons
+$('[data-index="7"]').on('click', e =>{
+  e.preventDefault()
+  moveTo(".maincontant", 7);
+});
+
+
+
 

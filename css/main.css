@@ -733,7 +733,8 @@ h1, h2, h3, h4, h5, h6, p {
   transform: translateY(-50%);
   background-image: url("../../icons/arrow-scroll.svg");
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: 2; }
   @media screen and (max-width: 768px) {
     .burger__scroll {
       top: 48%; } }
@@ -1513,10 +1514,8 @@ h1, h2, h3, h4, h5, h6, p {
   color: .modal-window-title dark; }
 
 .map {
-  background-image: url("../img/map.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
+  width: 100%;
+  height: 100vh; }
 
 .footer {
   width: 100%;
@@ -1624,6 +1623,7 @@ h1, h2, h3, h4, h5, h6, p {
     fill: #fff; }
 
 .pagination {
+  display: none;
   position: fixed;
   right: 1.875rem;
   top: 4.375rem; }
@@ -1675,6 +1675,42 @@ h1, h2, h3, h4, h5, h6, p {
   border: 0.0625rem solid #fff;
   border-radius: 50%;
   background-color: transparent; }
+
+.onepage-pagination {
+  position: fixed;
+  right: 1.875rem;
+  top: 4.375rem; }
+  @media screen and (max-width: 768px) {
+    .onepage-pagination {
+      display: none; } }
+  @media screen and (max-width: 480px) {
+    .onepage-pagination {
+      display: none; } }
+
+.onepage-pagination li a {
+  height: 1rem;
+  width: 1rem;
+  margin-bottom: 0.9375rem;
+  padding: 0; }
+
+.onepage-pagination li a:before {
+  content: '';
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  background-color: #fff; }
+
+.onepage-pagination li a.active:before {
+  width: 1rem;
+  height: 1rem;
+  background: none;
+  border: 0.0625rem solid #fff;
+  margin-top: -0.3125rem;
+  left: 0.21875rem;
+  border-radius: 50%; }
 
 .hamburger-menu {
   -webkit-box-orient: vertical;

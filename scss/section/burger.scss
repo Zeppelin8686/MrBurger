@@ -15,6 +15,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   background-image: url('../../icons/arrow-scroll.svg');
   background-position: center center;
   background-repeat: no-repeat;
+  z-index: 2;
 
   @include tablets {
     top: 48%;
