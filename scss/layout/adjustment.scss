@@ -77,3 +77,26 @@ flex-direction: column;
     background-color: $dark-red;
   }
 }
+
+.cross-btn {
+  position: absolute;
+  top: rem(20px);
+  right: rem(20px);
+  width: rem(18px);
+  height: rem(18px);
+  fill: $price;
+  cursor: pointer;
+}
+
+.close-ingrediets {
+  display: none;
+
+  @include tablets {
+    display: initial;
+  }  
+}
+
+.close-menu {
+  display: none;
+  fill: #fff;
+}
