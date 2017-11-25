@@ -58,7 +58,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
   }
 
   @include phones {
-    padding: 0;
+    padding: 0 8%;
   }
 }
 
@@ -109,6 +109,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
     font-family: gagalin;
     font-weight: normal;
     font-size: rem(14px);
+
+    @include phones {
+      bottom: rem(2px);
+    }
   }
 
   @include tablets {
@@ -152,6 +156,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
     font-family: gagalin;
     font-weight: normal;
     font-size: rem(20px);
+
+    @include phones {
+      left: rem(20px);
+    }
   }
 
   &:after {
@@ -164,6 +172,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
     font-family: gagalin;
     font-weight: normal;
     font-size: rem(14px);
+
+    @include phones {
+      bottom: rem(-10px);
+      left: rem(20px);
+    }
   }
 
   @include tablets {

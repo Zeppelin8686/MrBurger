@@ -702,7 +702,7 @@
 					</div>
 				</li>
 				<li class="menu-accordion__item">
-					<a href="#" class="menu-accordion__trigger" style="background-image: url('img/menu-acc-veg.jpg')">
+					<a href="#" class="menu-accordion__trigger" style="background-image: url('img/menu-acc-veg.jpg') center right;">
 						<h3 class="menu-accordion__trigger-title">Вегетарианское</h3>
 					</a>
 					<div class="menu-accordion__content">
@@ -853,17 +853,17 @@
 		<section class="section order section_center">
 			<div class="container">
 				<h2 class="section-title order__title section-title_center">Закажите доставку</h2>
-				<form action="#" id="order-form">
+				<form action="server.php" method="post" id="order-form">
 					<div class="order__form">
 						<div class="order__form-col">
 							<div class="order__form-row">
 								<label class="order__form-block">
 									<p class="order__form-title">Имя</p>
-									<input class="order__form-input" name="name" type="text" placeholder="">
+									<input class="order__form-input" name="user-name" type="text" placeholder="" required>
 								</label>
 								<label class="order__form-block">
 									<p class="order__form-title">Телефон</p>
-									<input class="order__form-input" name="phone" type="text" placeholder="">
+									<input class="order__form-input" name="user-phone" type="text" placeholder="" required>
 								</label>
 							</div>
 							<div class="order__form-row">
@@ -926,8 +926,12 @@
 						<input class="btn form-buttons_reset" type="reset" value="Очистить">
 					</div>
 				</form>
-				<div class="modal-window">
+				<div class="modal-window modal-window__sent">
 					<span class="modal-window-title">Сообщение отправлено</span>
+					<button type="button" class="btn close-btn">Закрыть</button>
+				</div>
+				<div class="modal-window modal-window__error">
+					<span class="modal-window-title">Что-то пошло не так! support@burger.com</span>
 					<button type="button" class="btn close-btn">Закрыть</button>
 				</div>
 			</div>

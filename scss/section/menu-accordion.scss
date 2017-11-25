@@ -24,6 +24,17 @@
   }
 }
 
+.menu-accordion__trigger:before {
+  content: "";
+position: absolute;
+top:0;
+right: 0;
+left: 0;
+bottom: 0;
+background: #4c4e50;
+opacity: .5;
+}
+
 .menu-accordion__trigger-title {
   position: absolute;
   left: 50%;

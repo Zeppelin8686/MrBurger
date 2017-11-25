@@ -277,16 +277,17 @@ let menu = (function() {
       body.classList.toggle('body-active-menu');
       e.preventDefault()
     }
+    let _closeMenu = e => {
+      button.classList.remove('hamburger-menu--active');
+      menu.classList.remove('hero-overlay--active');
+      body.classList.remove('body-active-menu');
+    }
   
     let addListeners = function() {
       button.addEventListener('click', _toggleClass);
 
-      for (i=0; links.length<1; i++) {
-        links[i].addEventListener('click', e => {
-          button.classList.remove('hamburger-menu--active');
-          menu.classList.remove('hero-overlay--active');
-          body.classList.remove('body-active-menu');
-        });
+      for (i=0; i < links.length; i++) {
+        links[i].addEventListener('click', _closeMenu);
       }
     }
   
@@ -301,18 +302,19 @@ let menu = (function() {
 
 function modalWindow() {
   let submitBtn = document.querySelector('.form-buttons_submit')
-  let modalWindow = document.querySelector('.modal-window');
-  let closeBtn = document.querySelector('.close-btn')
+      modalWindow = document.querySelectorAll('.modal-window');
+      closeBtn = document.querySelectorAll('.close-btn')
 
-  submitBtn.addEventListener('click', e => {
-       modalWindow.classList.add('modal-window--active')
-      e.preventDefault()
-});
 
-  closeBtn.addEventListener('click', e => {
-      modalWindow.classList.remove('modal-window--active')
+  for (let i = 0; i < closeBtn.length; i++) {
+    closeBtn[i].addEventListener('click', e => {
       e.preventDefault()
-});
+
+      for (let i = 0; i < modalWindow.length; i++ ) {
+        modalWindow[i].classList.remove('modal-window--active')
+      }
+    });
+  }
 }
 modalWindow();
 
@@ -493,6 +495,38 @@ $('[data-index="7"]').on('click', e =>{
   e.preventDefault()
   moveTo(".maincontant", 7);
 });
+
+//Submit-----------------------------------------
+let submitForm = function (e) {
+  e.preventDefault();
+
+  let form = $(e.target),
+      data = form.serialize(),
+      url = form.attr('action');
+
+  let request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data,
+        // dataType: 'JSON'
+    });
+
+  request.done(function(msg) {
+    let modalWindowSent = document.querySelector('.modal-window__sent');
+      modalWindowSent.classList.add('modal-window--active')
+  });
+
+  request.fail(function(jqXHR) {
+    let modalWindowError = document.querySelector('.modal-window__error');
+      modalWindowError.classList.add('modal-window--active')
+  });
+
+  request.always(function(jqXHR) {
+    document.querySelector('#order-form').reset(); 
+  })
+}
+
+$('#order-form').on('submit', submitForm);
 
 
 

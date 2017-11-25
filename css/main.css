@@ -777,7 +777,7 @@ h1, h2, h3, h4, h5, h6, p {
       padding: 0 15%; } }
   @media screen and (max-width: 480px) {
     .burger-content {
-      padding: 0; } }
+      padding: 0 8%; } }
 
 .burger-content__elem {
   display: -webkit-box;
@@ -825,6 +825,9 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: gagalin;
     font-weight: normal;
     font-size: 0.875rem; }
+    @media screen and (max-width: 480px) {
+      .burger-content__ingredients:after {
+        bottom: 0.125rem; } }
   @media screen and (max-width: 768px) {
     .burger-content__ingredients {
       top: -0.25rem;
@@ -861,6 +864,9 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: gagalin;
     font-weight: normal;
     font-size: 1.25rem; }
+    @media screen and (max-width: 480px) {
+      .burger-content__kkal:before {
+        left: 1.25rem; } }
   .burger-content__kkal:after {
     content: 'ккал';
     position: absolute;
@@ -871,6 +877,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: gagalin;
     font-weight: normal;
     font-size: 0.875rem; }
+    @media screen and (max-width: 480px) {
+      .burger-content__kkal:after {
+        bottom: -0.625rem;
+        left: 1.25rem; } }
   @media screen and (max-width: 768px) {
     .burger-content__kkal {
       top: -1.125rem;
@@ -1213,6 +1223,16 @@ h1, h2, h3, h4, h5, h6, p {
     .menu-accordion__trigger {
       width: 3.4375rem; } }
 
+.menu-accordion__trigger:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #4c4e50;
+  opacity: .5; }
+
 .menu-accordion__trigger-title {
   position: absolute;
   left: 50%;
@@ -1490,6 +1510,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  text-align: center;
   top: 50%;
   left: -9999px;
   opacity: 0;
