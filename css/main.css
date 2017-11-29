@@ -848,11 +848,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .burger-content__kkal {
   position: absolute;
-  bottom: 4px;
-  left: 3px;
+  bottom: 0.25rem;
+  left: 0.1875rem;
   background-image: url("../../icons/kkal.svg");
   background-repeat: no-repeat;
-  background-position: left center; }
+  background-position: left center;
+  opacity: .5; }
   .burger-content__kkal:before {
     content: '1200';
     position: absolute;

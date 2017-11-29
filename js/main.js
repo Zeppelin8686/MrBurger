@@ -322,21 +322,34 @@ modalWindow();
 // dropdown menu----------------------------------------------------------
 
 function dropDown() {
-  let ingredientsBtn = document.querySelector('.burger-content__ingredients')
-  let dropdowm = document.querySelector('.ingredients-dropdown')
-  let crossBtn = document.querySelector('.close-ingrediets')
+  let ingredientsBtn = document.querySelectorAll('.burger-content__ingredients')
+  let dropdowm = document.querySelectorAll('.ingredients-dropdown')
+  let crossBtn = document.querySelectorAll('.close-ingrediets')
   
-  ingredientsBtn.addEventListener('mouseover', e => {
-    dropdowm.classList.add('ingredients-dropdown--active')
-  });
-  
-  crossBtn.addEventListener('click', e => {
-    dropdowm.classList.remove('ingredients-dropdown--active')
-  })
-  
-  ingredientsBtn.addEventListener('mouseout', e => {
-    dropdowm.classList.remove('ingredients-dropdown--active')
-  });  
+  for (let i = 0; i < ingredientsBtn.length; i++) {
+    ingredientsBtn[i].addEventListener('mouseover', e => {
+
+      for (let i=0; i < dropdowm.length; i++) {
+        dropdowm[i].classList.add('ingredients-dropdown--active')
+      }
+    })
+
+    ingredientsBtn[i].addEventListener('mouseout', e => {
+      
+      for (let i=0; i < dropdowm.length; i++) {
+         dropdowm[i].classList.remove('ingredients-dropdown--active')
+      }
+    })
+  }
+
+  for (let i = 0; i < crossBtn.length; i++) {
+    crossBtn[i].addEventListener('click', e => {
+
+      for (let i=0; i < dropdowm.length; i++) {
+        dropdowm[i].classList.remove('ingredients-dropdown--active')
+      }
+    })
+  }
 }
 dropDown();
 

@@ -139,11 +139,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
 
 .burger-content__kkal {
   position: absolute;  
-  bottom: 4px;
-  left: 3px;
+  bottom: rem(4px);
+  left: rem(3px);
   background-image: url('../../icons/kkal.svg');
   background-repeat: no-repeat;
-  background-position: left center; 
+  background-position: left center;
+  opacity: .5;
 
   &:before {
     content: '1200';
